@@ -1,0 +1,278 @@
+/* src/Splashscreen/Splashscreen.css */
+.background-slide {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: slideShow 10s infinite;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@keyframes slideShow {
+  0% {
+    background-image: url("../../assets/img/geoffrey.jpg");
+  }
+  25% {
+    background-image: url("../../assets/img/geoffrey.jpg");
+  }
+  50% {
+    background-image: url("../../assets/img/her.jpg");
+  }
+  100% {
+    background-image: url("../../assets/img/joseph.jpg");
+  }
+}
+
+nav {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav ul li a:hover {
+  font-size: 22px;
+  text-decoration: underline;
+}
+
+nav .logo {
+  display: flex;
+  align-items: center;
+}
+
+nav .logo img {
+  margin-right: 10px;
+  width: 40px; /* Fixed width for logo */
+  height: auto;
+}
+
+nav .logo span {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Hamburger Menu Styles */
+.menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.nav-links.open {
+  display: flex;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  /* Tablets and below */
+  nav {
+    padding: 15px;
+  }
+
+  nav ul {
+    gap: 15px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+
+  nav ul li a:hover {
+    font-size: 18px;
+  }
+
+  nav .logo span {
+    font-size: 20px;
+  }
+
+  .content h1 {
+    font-size: 36px;
+  }
+
+  .content button {
+    padding: 8px 16px;
+    font-size: 16px;
+  }
+
+  footer p {
+    font-size: 16px;
+  }
+
+  footer .social-links a {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Phones */
+  nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  nav .logo img {
+    width: 30px;
+  }
+
+  nav .logo span {
+    font-size: 18px;
+  }
+
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: left 0.3s ease;
+  }
+
+  .nav-links.open {
+    display: flex;
+    left: 0;
+  }
+
+  .nav-links li {
+    margin: 20px 0;
+  }
+
+  .nav-links li a {
+    font-size: 20px;
+  }
+
+  .content h1 {
+    font-size: 28px;
+  }
+
+  .content hr {
+    width: 40px;
+  }
+
+  .content button {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  footer p {
+    font-size: 14px;
+  }
+
+  footer .social-links {
+    gap: 10px;
+  }
+
+  footer .social-links a {
+    font-size: 16px;
+  }
+}
+
+.content {
+  text-align: center;
+  padding: 20px;
+}
+
+.content h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.content hr {
+  border: 0;
+  height: 2px;
+  background: #00f;
+  width: 60px;
+  margin: 20px auto;
+}
+
+.content button {
+  background: #00f;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.content button:hover {
+  background: #0047ab;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+footer p {
+  margin-bottom: 10px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+footer .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+footer .social-links a {
+  color: #ccc;
+  font-size: 20px;
+}
+
+footer .social-links a:hover {
+  color: #fff;
+}
