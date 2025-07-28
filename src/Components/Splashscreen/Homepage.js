@@ -1,5 +1,5 @@
 // src/HomePage.js
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
 import '../Splashscreen/Splashscreen.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
